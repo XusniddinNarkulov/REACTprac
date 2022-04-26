@@ -13,7 +13,7 @@ class App extends React.Component {
     const data = await axios.get("https://api.unsplash.com/search/photos", {
       params: {
         query: imgData,
-        per_page: this.state.per,
+        per_page: 100,
       },
       headers: {
         Authorization: "Client-ID fFxqUKuJS8hx3nwzRQoYiHB5URcqFjkGG-FSsZUDOb4",
@@ -23,9 +23,9 @@ class App extends React.Component {
     console.log(data);
   };
 
-  loadMore = async () => {
+  loadMore = () => {
     this.setState((old) => {
-      return { per: old.per + 10 };
+      return { per: old.per + 5 };
     });
   };
 
@@ -33,7 +33,7 @@ class App extends React.Component {
     return (
       <div>
         <SearchBar malumotniOl={this.searchdanMalumotniOl} />
-        <ImageList dataImg={this.state.imageArr} />
+        <ImageList dataImg={this.state.imageArr.slice(0, this.state.per)} />
         <button onClick={this.loadMore}>Loadmore</button>
         {/* <div>{this.state.imageArr.length}</div> */}
       </div>
