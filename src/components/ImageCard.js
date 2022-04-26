@@ -10,7 +10,7 @@ class ImageCard extends React.Component {
   }
 
   setSpan = () => {
-    const height = this.imageDOM.current.clientHeight + 1;
+    const height = this.imageDOM.current.clientHeight + 10;
     this.setState({ spans: height });
     console.log(height);
   };

@@ -1,6 +1,6 @@
 import React, { createRef } from "react";
 import "./ImageList.css";
-import ImageCard from "./ImageCard";
+import ImageCard from "./ImageCard.js";
 
 class ImageList extends React.Component {
   constructor(props) {

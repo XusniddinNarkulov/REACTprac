@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
-import SearchBar from "./SearchBar";
-import ImageList from "./ImageList";
+import SearchBar from "./SearchBar.js";
+import ImageList from "./ImageList.js";
 
 class App extends React.Component {
   state = { imageArr: [] };
@@ -24,7 +24,7 @@ class App extends React.Component {
       <div>
         <SearchBar malumotniOl={this.searchdanMalumotniOl} />
         <ImageList dataImg={this.state.imageArr} />
-        <button>Loadmore</button>
+        {/* <button>Loadmore</button> */}
         {/* <div>{this.state.imageArr.length}</div> */}
       </div>
     );
