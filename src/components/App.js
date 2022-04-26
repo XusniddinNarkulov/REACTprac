@@ -24,6 +24,7 @@ class App extends React.Component {
       <div>
         <SearchBar malumotniOl={this.searchdanMalumotniOl} />
         <ImageList dataImg={this.state.imageArr} />
+        <button>Loadmore</button>
         {/* <div>{this.state.imageArr.length}</div> */}
       </div>
     );

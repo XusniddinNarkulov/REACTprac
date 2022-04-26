@@ -1,6 +1,6 @@
 import React from "react";
 // import "./ImageCard.css";
-// import "./ImageList.css";
+import "./ImageList.css";
 
 class ImageCard extends React.Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class ImageCard extends React.Component {
   }
 
   setSpan = () => {
-    const height = this.imageDOM.current.clientHeight + 10;
+    const height = this.imageDOM.current.clientHeight + 1;
     this.setState({ spans: height });
     console.log(height);
   };
