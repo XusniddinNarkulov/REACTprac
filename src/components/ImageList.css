@@ -1,0 +1,21 @@
+.img-list {
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0 1rem;
+  grid-auto-rows: 1px;
+  /* grid-auto-columns: 1px; */
+  grid-auto-flow: row dense;
+  /* grid-auto-columns: auto; */
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+.img-list img {
+  grid-row-end: span 5;
+  /* grid-column-end: span 5; */
+  width: 100%;
+}
+img:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}

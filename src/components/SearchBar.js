@@ -17,6 +17,7 @@ class SearchBar extends React.Component {
   formOnSubmit = (e) => {
     e.preventDefault();
     this.props.malumotniOl(this.state.kalitSuz);
+
     // this.setState({ kalitSuz: "" });
   };
 

@@ -1,10 +1,22 @@
-import React from "react";
+import React, { createRef } from "react";
+import "./ImageList.css";
+import ImageCard from "./ImageCard";
 
-const ImageList = () => {
-  const bos = () => {
-    console.log("hello");
+class ImageList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  imageRender = () => {
+    return this.props.dataImg.map((val, key) => {
+      return <ImageCard data={val} />;
+    });
   };
-  return <button onMouseMove={bos}>Bosib tasha</button>;
-};
+
+  render() {
+    return <div className="img-list">{this.imageRender()}</div>;
+  }
+}
 
 export default ImageList;
