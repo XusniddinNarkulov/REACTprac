@@ -37,7 +37,7 @@ class App extends React.Component {
       return (
          <div>
             <SearchBar malumotniOl={this.searchdanMalumotniOl} />
-            <ImageList dataImg={this.state.imageArr.slice(0, this.state.per)} />
+            <ImageList dataImg={this.state.imageArr} />
             {this.state.imageArr[0] ? (
                <button onClick={this.loadMore}>Loadmore</button>
             ) : (
